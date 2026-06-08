@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>HARISH — Portfolio</title>
+  <meta name="description" content="Harish — Full Stack Developer, AI Builder & Creative Engineer"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ═══ PHASE 1: LINUX TERMINAL (full screen, pure black, NO effects) ═══ -->
+  <div id="terminal">
+    <div id="term-body">
+      <div id="term-history"></div>
+      <div id="term-live">
+        <span class="prompt"><span class="user">harish</span><span class="at">@</span><span class="host">portfolio</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>&nbsp;</span><span id="term-input"></span><span id="term-cur">█</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ EFFECTS — all hidden during terminal phase ═══ -->
+  <canvas id="grain"></canvas>
+  <canvas id="dust"></canvas>
+  <canvas id="geo"></canvas>
+  <div id="spotlight"></div>
+
+  <!-- ═══ PHASE 2: HERO ═══ -->
+  <div id="hero">
+
+    <!-- floating code bg -->
+    <div id="code-bg" aria-hidden="true">
+      <pre class="cf a">const build = (dream) => {
+  const result = dream.execute();
+  return ship(result);
+};</pre>
+      <pre class="cf b">async function createImpact() {
+  await deploy(vision);
+  return excellence;
+}</pre>
+      <pre class="cf c">import { creativity }
+  from '@harish/core';
+export default brilliance;</pre>
+      <pre class="cf d">while (alive) {
+  learn(); build();
+  ship(); repeat();
+}</pre>
+    </div>
+
+    <div id="hero-center">
+      <!-- Name -->
+      <div id="name-wrap">
+        <h1 id="the-name" aria-label="Harish">
+          <span class="nl" data-i="0">H</span><span
+               class="nl" data-i="1">A</span><span
+               class="nl" data-i="2">R</span><span
+               class="nl" data-i="3">I</span><span
+               class="nl" data-i="4">S</span><span
+               class="nl" data-i="5">H</span>
+        </h1>
+      </div>
+
+      <!-- Role -->
+      <div id="role-row">
+        <div class="role-line"></div>
+        <span id="role-txt">FULL STACK DEVELOPER</span>
+        <div class="role-line"></div>
+      </div>
+
+      <!-- Tagline -->
+      <p id="tagline">Building Digital Experiences &nbsp;·&nbsp; <em>Through Code &amp; AI</em></p>
+
+      <!-- Buttons -->
+      <div id="btns">
+        <button id="btn-explore" class="btn gold-btn">
+          <span>Explore Journey</span>
+          <div class="btn-sheen"></div>
+        </button>
+        <button id="btn-resume" class="btn ghost-btn">
+          <span>Download Resume</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- scroll -->
+    <div id="scroll-cue">
+      <div class="s-line"></div>
+      <span>SCROLL</span>
+    </div>
+
+    <!-- audio -->
+    <button id="audio-btn">
+      <svg id="ico-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="17" height="17">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
+      </svg>
+      <svg id="ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="17" height="17" style="display:none">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

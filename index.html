@@ -1,37 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>HARISH — Portfolio</title>
-  <meta name="description" content="Harish — Full Stack Developer, AI Builder & Creative Engineer"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
-</head>
-<body>
 
-  <!-- ═══ PHASE 1: LINUX TERMINAL (full screen, pure black, NO effects) ═══ -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>HARISH — Full Stack Developer</title>
+  <meta name="description"
+    content="Harish S — Full Stack Developer from Chennai. JavaScript, React, Node.js, Express, SQLite & Supabase. Building scalable web apps, REST APIs and AI-powered solutions." />
+  <meta property="og:title" content="HARISH — Full Stack Developer" />
+  <meta property="og:description"
+    content="Full Stack Developer skilled in JavaScript, React, Node.js, Express & Supabase. Projects spanning web, AI and IoT." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="locked">
+
+  <button id="skip-intro" aria-label="Skip intro animation">SKIP INTRO ⏎</button>
+
+  <!-- PHASE 1: TERMINAL -->
   <div id="terminal">
     <div id="term-body">
       <div id="term-history"></div>
       <div id="term-live">
-        <span class="prompt"><span class="user">harish</span><span class="at">@</span><span class="host">portfolio</span><span class="colon">:</span><span class="path">~</span><span class="dollar">$</span>&nbsp;</span><span id="term-input"></span><span id="term-cur">█</span>
+        <span class="prompt"><span class="user">harish</span><span class="at">@</span><span
+            class="host">portfolio</span><span class="colon">:</span><span class="path">~</span><span
+            class="dollar">$</span>&nbsp;</span><span id="term-input"></span><span id="term-cur">█</span>
       </div>
     </div>
   </div>
 
-  <!-- ═══ EFFECTS — all hidden during terminal phase ═══ -->
-  <canvas id="grain"></canvas>
-  <canvas id="dust"></canvas>
-  <canvas id="geo"></canvas>
-  <div id="spotlight"></div>
+  <!-- AMBIENT LAYERS -->
+  <canvas id="grain" aria-hidden="true"></canvas>
+  <canvas id="dust" aria-hidden="true"></canvas>
+  <canvas id="geo" aria-hidden="true"></canvas>
+  <div id="spotlight" aria-hidden="true"></div>
 
-  <!-- ═══ PHASE 2: HERO ═══ -->
-  <div id="hero">
+  <!-- NAVIGATION -->
+  <nav id="topnav" aria-label="Primary">
+    <a class="brand" href="#hero">H<span>.</span></a>
+    <button id="nav-burger" aria-label="Toggle menu"
+      aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul id="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certs">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-    <!-- floating code bg -->
+  <!-- PHASE 2: HERO -->
+  <header id="hero">
+
     <div id="code-bg" aria-hidden="true">
       <pre class="cf a">const build = (dream) => {
   const result = dream.execute();
@@ -51,62 +79,253 @@ export default brilliance;</pre>
     </div>
 
     <div id="hero-center">
-      <!-- Name -->
       <div id="name-wrap">
-        <h1 id="the-name" aria-label="Harish">
-          <span class="nl" data-i="0">H</span><span
-               class="nl" data-i="1">A</span><span
-               class="nl" data-i="2">R</span><span
-               class="nl" data-i="3">I</span><span
-               class="nl" data-i="4">S</span><span
-               class="nl" data-i="5">H</span>
+        <h1 id="the-name">
+          <span class="nl">H</span><span class="nl">A</span><span class="nl">R</span><span class="nl">I</span><span
+            class="nl">S</span><span class="nl">H</span>
         </h1>
       </div>
 
-      <!-- Role -->
       <div id="role-row">
         <div class="role-line"></div>
         <span id="role-txt">FULL STACK DEVELOPER</span>
         <div class="role-line"></div>
       </div>
 
-      <!-- Tagline -->
       <p id="tagline">Building Digital Experiences &nbsp;·&nbsp; <em>Through Code &amp; AI</em></p>
 
-      <!-- Buttons -->
       <div id="btns">
-        <button id="btn-explore" class="btn gold-btn">
+        <a id="btn-explore" class="btn gold-btn" href="#about">
           <span>Explore Journey</span>
           <div class="btn-sheen"></div>
-        </button>
-        <button id="btn-resume" class="btn ghost-btn">
+        </a>
+        <a id="btn-resume" class="btn ghost-btn" href="Harish_Resume.pdf" download="Harish_S_Resume.pdf">
           <span>Download Resume</span>
-        </button>
+        </a>
       </div>
     </div>
 
-    <!-- scroll -->
-    <div id="scroll-cue">
+    <div id="scroll-cue" aria-hidden="true">
       <div class="s-line"></div>
       <span>SCROLL</span>
     </div>
+  </header>
 
-    <!-- audio -->
-    <button id="audio-btn">
-      <svg id="ico-mute" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="17" height="17">
-        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-        <line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>
-      </svg>
-      <svg id="ico-sound" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" width="17" height="17" style="display:none">
-        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
-        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
-      </svg>
-    </button>
 
-  </div>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section id="about" class="sec">
+      <div class="wrap">
+        <div class="sec-head reveal"><span class="sec-num">01</span>
+          <h2>About</h2>
+          <div class="sec-line"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-txt reveal">
+            <p>Full Stack Developer with a strong foundation in <em>web development</em> and <em>problem-solving</em>.
+              Skilled in JavaScript, React.js, Node.js, Express.js, SQLite and Supabase, with experience building
+              responsive web applications, RESTful APIs, authentication systems and database-driven solutions.</p>
+            <p>Graduated with a Bachelor's degree in <em>Artificial Intelligence and Data Science</em>, combining
+              software development expertise with an understanding of AI technologies.</p>
+            <p>Passionate about building scalable applications, learning modern technologies, and solving real-world
+              problems through software.</p>
+          </div>
+          <aside class="meta-card reveal" data-d="1">
+            <div class="meta-row"><span class="k">BASED IN</span><span>Chennai, Poonamallee</span></div>
+            <div class="meta-row"><span class="k">EMAIL</span><a
+                href="mailto:harish1116.dev@gmail.com">harish1116.dev@gmail.com</a></div>
+            <div class="meta-row"><span class="k">PHONE</span><a href="tel:+917010308345">+91 70103 08345</a></div>
+            <div class="meta-row"><span class="k">DEGREE</span><span>B.Tech AI &amp; Data Science</span></div>
+            <div class="meta-row"><span class="k">STATUS</span><span class="online">● Open to opportunities</span></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="sec">
+      <div class="wrap">
+        <div class="sec-head reveal"><span class="sec-num">02</span>
+          <h2>Tech Arsenal</h2>
+          <div class="sec-line"></div>
+        </div>
+        <div class="skills-grid reveal">
+          <div class="skill">JavaScript</div>
+          <div class="skill">React.js</div>
+          <div class="skill">Node.js</div>
+          <div class="skill">Express.js</div>
+          <div class="skill">Python</div>
+          <div class="skill">SQL</div>
+          <div class="skill">SQLite</div>
+          <div class="skill">Supabase</div>
+          <div class="skill">HTML</div>
+          <div class="skill">CSS</div>
+          <div class="skill">Git</div>
+          <div class="skill">REST APIs</div>
+          <div class="skill">CLI</div>
+          <div class="skill">Network Basics</div>
+          <div class="skill">OS Fundamentals</div>
+          <div class="skill">Gen AI Tools</div>
+        </div>
+        <h3 class="sub-h reveal">Soft Skills</h3>
+        <div class="pills reveal">
+          <span class="pill">Problem Solving</span>
+          <span class="pill">Fast Learner</span>
+          <span class="pill">Team Collaboration</span>
+          <span class="pill">Leadership</span>
+        </div>
+        <h3 class="sub-h reveal">Languages</h3>
+        <div class="pills reveal">
+          <span class="pill">Tamil</span>
+          <span class="pill">English</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="sec">
+      <div class="wrap">
+        <div class="sec-head reveal"><span class="sec-num">03</span>
+          <h2>Projects</h2>
+          <div class="sec-line"></div>
+        </div>
+        <div class="proj-grid">
+          <article class="proj-card reveal">
+            <span class="proj-num">/01</span>
+            <h3>Twitter Backend</h3>
+            <p>A Twitter-clone backend server with authentication, tweets, follows and feeds — built on RESTful
+              architecture.</p>
+            <div class="tags"><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">REST
+                API</span><span class="tag">SQLite</span></div>
+          </article>
+          <article class="proj-card reveal" data-d="1">
+            <span class="proj-num">/02</span>
+            <h3>Compass</h3>
+            <p>AI-powered personalized daily news briefing app that curates what matters to you, every morning.</p>
+            <div class="tags"><span class="tag">AI</span><span class="tag">Personalization</span><span class="tag">Full
+                Stack</span></div>
+          </article>
+          <article class="proj-card reveal" data-d="2">
+            <span class="proj-num">/03</span>
+            <h3>Fake Healthcare News Detection</h3>
+            <p>ML &amp; DL models trained on synthetic medical datasets to detect fake healthcare news and
+              misinformation.</p>
+            <div class="tags"><span class="tag">Machine Learning</span><span class="tag">Deep Learning</span><span
+                class="tag">Python</span></div>
+          </article>
+          <article class="proj-card reveal">
+            <span class="proj-num">/04</span>
+            <h3>Watt Wise</h3>
+            <p>IoT-powered electricity monitoring platform with real-time dashboards, data storage and energy usage
+              prediction.</p>
+            <div class="tags"><span class="tag">IoT</span><span class="tag">Real-time</span><span
+                class="tag">Prediction</span><span class="tag">Dashboards</span></div>
+          </article>
+          <article class="proj-card reveal" data-d="1">
+            <span class="badge-dev">IN DEVELOPMENT</span>
+            <span class="proj-num">/05</span>
+            <h3>Dealzy</h3>
+            <p>A local deals and offers discovery platform connecting customers with nearby shops and businesses.</p>
+            <div class="tags"><span class="tag">Marketplace</span><span class="tag">Geo Discovery</span><span
+                class="tag">Full Stack</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="sec">
+      <div class="wrap">
+        <div class="sec-head reveal"><span class="sec-num">04</span>
+          <h2>Education</h2>
+          <div class="sec-line"></div>
+        </div>
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <h3>B.Tech — Artificial Intelligence &amp; Data Science</h3>
+            <span class="tl-org">S.A. Engineering College</span>
+            <p class="tl-note">Software engineering foundations fused with AI &amp; data science.</p>
+          </div>
+          <div class="tl-item reveal" data-d="1">
+            <h3>Full Stack Development</h3>
+            <span class="tl-org">NxtWave</span>
+            <p class="tl-note">Industry-ready training — JavaScript, React, Node.js, Express, databases.</p>
+          </div>
+          <div class="tl-item reveal" data-d="2">
+            <h3>Class 12th</h3>
+            <span class="tl-org">Holy Angel Higher Secondary School, Rettanai, Vilupuram</span>
+          </div>
+          <div class="tl-item reveal" data-d="3">
+            <h3>Schooling</h3>
+            <span class="tl-org">Sri Raja Rajeshwari Matric High School, Pelakuppam, Tindivanam</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certs" class="sec">
+      <div class="wrap">
+        <div class="sec-head reveal"><span class="sec-num">05</span>
+          <h2>Certificates</h2>
+          <div class="sec-line"></div>
+        </div>
+        <div class="cert-grid">
+          <a class="cert reveal" data-d="4" href="https://www.linkedin.com/posts/harish-s-916b24299_share-7471247923469635584-eKaZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEu-k1sBRLoh36eMkkMMDSJu4qmm8uVQIGg" target="_blank" rel="noopener noreferrer"><span class="cert-ico">◆</span><span>XPM 4.0 Fundamentals</span></a>
+          <a class="cert reveal" data-d="5" href="https://www.linkedin.com/posts/harish-s-916b24299_ai-llms-agenticai-activity-7372488903364132864-mf4R?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEu-k1sBRLoh36eMkkMMDSJu4qmm8uVQIGg" target="_blank" rel="noopener noreferrer"><span class="cert-ico">◆</span><span>LLMs &amp; Agentic AI Masterclass</span></a>
+          <a class="cert reveal" data-d="4" href="https://www.linkedin.com/posts/harish-s-916b24299_share-7471248342245613568-dHQZ/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEu-k1sBRLoh36eMkkMMDSJu4qmm8uVQIGg" target="_blank" rel="noopener noreferrer"><span class="cert-ico">◆</span><span>Ethical Hacking Workshop</span></a>
+          <a class="cert reveal" data-d="5" href="https://www.linkedin.com/posts/harish-s-916b24299_activity-7471247632687083520-wjzW?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEu-k1sBRLoh36eMkkMMDSJu4qmm8uVQIGg" target="_blank" rel="noopener noreferrer"><span class="cert-ico">◆</span><span>AWS Workshop</span></a>
+          <a class="cert reveal" data-d="4" href="https://www.linkedin.com/posts/harish-s-916b24299_activity-7471255292639387648-TOqv?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEu-k1sBRLoh36eMkkMMDSJu4qmm8uVQIGg" target="_blank" rel="noopener noreferrer"><span class="cert-ico">◆</span><span>Gen AI Tools Workshop</span></a>
+          <a class="cert reveal" data-d="5" href="https://www.linkedin.com/posts/harish-s-916b24299_datavisualization-analytics-forageexperience-activity-7332041630411083777-9Abr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEu-k1sBRLoh36eMkkMMDSJu4qmm8uVQIGg" target="_blank" rel="noopener noreferrer"><span class="cert-ico">◆</span><span>Data Visualization — Empowering
+              Business with Effective Insights</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="sec">
+      <div class="wrap">
+        <div class="sec-head reveal"><span class="sec-num">06</span>
+          <h2>Contact</h2>
+          <div class="sec-line"></div>
+        </div>
+        <div class="contact-inner">
+          <p class="contact-big reveal">Let's Build Something Extraordinary</p>
+          <a class="contact-mail reveal" data-d="1" href="mailto:harish1116.dev@gmail.com">harish1116.dev@gmail.com</a>
+          <div class="contact-meta reveal" data-d="2">
+            <span>+91 70103 08345</span>
+            <span>·</span>
+            <span>Chennai, Poonamallee</span>
+          </div>
+          <div class="socials reveal" data-d="3">
+            <a href="https://www.linkedin.com/in/harish-s-916b24299/" target="_blank" rel="noopener noreferrer"
+              aria-label="LinkedIn profile">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 12.27h-3v-5.6c0-3.37-4-3.11-4 0v5.6h-3v-11h3v1.77c1.4-2.59 7-2.78 7 2.48v6.75z" />
+              </svg>
+            </a>
+            <a href="https://github.com/harish1116dev" target="_blank" rel="noopener noreferrer"
+              aria-label="GitHub profile">
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="foot">
+    <p>DESIGNED &amp; BUILT BY <span class="g">HARISH.S</span> · <span id="yr">2026</span></p>
+  </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="main.js"></script>
 </body>
+
 </html>
